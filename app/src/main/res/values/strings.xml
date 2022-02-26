@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">MovieApp</string>
+    <string name="tvname">Emri</string>
+    <string name="lastname">Mbiemri</string>
+    <string name="email">Email:</string>
+    <string name="password">FjaleKalimi</string>
+    <string name="btn_SignUp">Regjistrohu</string>
+    <string name="succes_db_Save">Te dhenat u ruajten me sukses</string>
+    <string name="tv_Username">Perdoruesi</string>
+    <string name="tv_Password">FjaleKalimi</string>
+    <string name="BtnLogin">Kycu</string>
+    <string name="BtnSignup">Regjistrohu</string>
+    <string name="user_not_found">Perdoruesi nuk eshte gjetur</string>
+    <string name="user_wrong_credintials">Kredincialet jane Gabim</string>
+    <string name="user_loggedin">Jeni lloguar me sukses </string>
+    <string name="add_user">Regjistro perdorues</string>
+
+</resources>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:gravity="center_vertical"
+    android:padding="16dp">
+
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:id="@+id/icona"
+            android:src="@mipmap/ic_launcher_round"
+            android:layout_centerHorizontal="true">
+
+        </ImageView>
+
+
+        <RelativeLayout
+            android:id="@+id/relView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/icona"
+            android:background="@drawable/drawable_register"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvname"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/edtextname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvname"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/tvLastname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtextname"
+                android:text="@string/lastname"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/edtextlastname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvLastname"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtextlastname"
+                android:text="@string/email"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/edtextemail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvEmail"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/tvPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtextemail"
+                android:text="@string/password"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/edtextpasword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvPassword"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/btnSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtextpasword"
+                android:layout_alignParentRight="true"
+                android:text="@string/btn_SignUp"
+                android:textSize="22sp" />
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LogInActivity"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_Username"
+        android:textSize="22sp"
+        android:id="@+id/usernametext"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        android:id="@+id/edittextusername"
+        android:layout_below="@+id/usernametext"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_Password"
+        android:textSize="22sp"
+        android:layout_below="@+id/edittextusername"
+        android:id="@+id/passwordtext"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:id="@+id/edittextpassword"
+        android:layout_below="@id/passwordtext"
+        />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/BtnLogin"
+        android:textSize="22sp"
+        android:id="@+id/btnLogin"
+        android:layout_below="@id/edittextpassword"
+
+
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/BtnSignup"
+        android:textSize="22sp"
+        android:id="@+id/btnSignUp"
+        android:layout_below="@id/edittextpassword"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/btnLogin"
+
+
+        />
+
+</RelativeLayout>
