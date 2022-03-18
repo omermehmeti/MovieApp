@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -44,7 +45,25 @@ public class MainActivity2 extends AppCompatActivity {
                 Toast.makeText(MainActivity2.this,"Uklikua pozicioni"+position,Toast.LENGTH_SHORT).show();
             }
         });
-        GetData();
+        new callDataAsync().execute();
+
+       /* Runnable r = new Runnable() {
+            @Override
+            public void run() {
+                try
+                {
+                    Thread.sleep(5000);
+                    GetData();
+                }
+                catch
+                (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        };
+        Thread th = new Thread(r);
+        th.start();*/
 
     }
 
@@ -80,8 +99,28 @@ public class MainActivity2 extends AppCompatActivity {
             }
             cursor.close();
             objDb.close();
+           /* runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    useradapter.notifyDataSetChanged();
+                }
+            });*/
+
+
+
+    }
+    class callDataAsync extends AsyncTask<Void, Void,Void>{
+
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            GetData();
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
             useradapter.notifyDataSetChanged();
-
-
+        }
     }
 }
